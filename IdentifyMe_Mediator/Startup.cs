@@ -47,12 +47,11 @@ namespace IdentifyMe_Mediator
             app.UseRouting();
             app.UseAriesFramework();
             app.UseMediatorDiscovery();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Mediator Work");
+                    await context.Response.WriteAsync("Mediator Worked");
                 });
             });
         }
