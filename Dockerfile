@@ -18,5 +18,6 @@ RUN dotnet publish "IdentifyMe_Mediator.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENV ASPNETCORE_URLS http://*:5000
-ENTRYPOINT ["dotnet", "IdentifyMe_Mediator.dll"]
+# ENV ASPNETCORE_URLS http://*:$PORT
+# ENTRYPOINT ["dotnet", "IdentifyMe_Mediator.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet IdentifyMe_Mediator.dll

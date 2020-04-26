@@ -23,7 +23,8 @@ namespace IdentifyMe_Mediator
                 {
                     #region Required configuration parameters
                     // Agent endpoint. Use fully qualified endpoint.
-                    options.EndpointUri = "http://localhost:5000";
+                    
+                    options.EndpointUri = "https://im-mediator.herokuapp.com";
                     #endregion
 
                     #region Optional configuration parameters
